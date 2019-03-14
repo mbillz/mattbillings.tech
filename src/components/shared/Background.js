@@ -1,16 +1,47 @@
-import React, { memo } from 'react';
+import React, { memo, useRef, useMemo } from 'react';
+import * as THREE from 'three/src/Three';
+import { Canvas, useRender } from 'react-three-fiber';
 import styled from 'styled-components';
-import { colors, viewports } from '../../utils/variables';
+
+function Stars() {
+  let group = useRef();
+  let theta = 0;
+  useRender(() => {
+    // Some things maybe shouldn't be declarative, we're in the render-loop here with full access to the instance
+    const r = 5 * Math.sin(THREE.Math.degToRad((theta += 0.1)));
+    const s = Math.cos(THREE.Math.degToRad(theta * 2));
+    group.current.rotation.set(r, r, r);
+    group.current.scale.set(s, s, s);
+  });
+  const [geo, mat, vertices, coords] = useMemo(() => {
+    const geo = new THREE.SphereBufferGeometry(1, 10, 10);
+    const mat = new THREE.MeshBasicMaterial({
+      color: new THREE.Color('lightblue'),
+    });
+    const coords = new Array(2000)
+      .fill()
+      .map(i => [
+        Math.random() * 800 - 400,
+        Math.random() * 800 - 400,
+        Math.random() * 800 - 400,
+      ]);
+    return [geo, mat, vertices, coords];
+  }, []);
+  return (
+    <group ref={group}>
+      {coords.map(([p1, p2, p3], i) => (
+        <mesh key={i} geometry={geo} material={mat} position={[p1, p2, p3]} />
+      ))}
+    </group>
+  );
+}
 
 const Background = () => {
   return (
     <Base>
-      {/* <RedShape xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 732">
-        <polygon points="0,0 1440,0 1440,378 0,732" />
-      </RedShape>
-      <YellowShape xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 240">
-        <polygon points="0,0 1440,70 1440,240 0,240" />
-      </YellowShape> */}
+      <Canvas>
+        <Stars />
+      </Canvas>
     </Base>
   );
 };
@@ -18,22 +49,11 @@ const Background = () => {
 export default memo(Background);
 
 const Base = styled.div`
-  background: ${colors.blue};
-  border-bottom: 1rem ${colors.red} solid;
-  border-top: 1rem ${colors.yellow} solid;
   bottom: 0;
   left: 0;
-  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
-  z-index: -1;
-
-  @media ${viewports.medium} {
-    background: ${colors.blue};
-    border-bottom: 0;
-    border-top: 0;
-  }
 `;
 
 // const RedShape = styled.svg`
