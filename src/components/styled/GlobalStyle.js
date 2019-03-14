@@ -1,6 +1,6 @@
 import reset from 'styled-reset';
 import { createGlobalStyle } from 'styled-components';
-import { fontFamilies, colors } from '../../utils/variables';
+import { fontFamilies, colors, viewports } from '../../utils/variables';
 import * as fonts from '../../fonts';
 
 const GlobalStyle = createGlobalStyle`
@@ -53,7 +53,11 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-family: ${fontFamilies.regular};
-    font-size: 16px;
+    font-size: 12px;
+
+    @media ${viewports.medium} {
+      font-size: 16px;
+    }
   }
 
   *,

@@ -20,7 +20,7 @@ const SocialIcons = () => {
         rel="noopener noreferrer"
       >
         <svg
-          enable-background="new 0 0 438.549 438.549"
+          enableBackground="new 0 0 438.549 438.549"
           viewBox="0 0 438.549 438.549"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -35,6 +35,13 @@ export default memo(SocialIcons);
 
 const Base = styled.div`
   display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+
+  @media ${viewports.medium} {
+    justify-content: flex-end;
+    margin-top: 0;
+  }
 `;
 
 const SocialLink = styled.a`

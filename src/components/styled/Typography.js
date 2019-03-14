@@ -14,6 +14,7 @@ export const Subheading = styled.h2`
 `;
 
 export const Copy = styled.p`
+  border-bottom: 1px #000 solid;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2.5;
@@ -21,11 +22,28 @@ export const Copy = styled.p`
   & em {
     font-style: italic;
   }
+
+  @media ${viewports.medium} {
+    border-bottom: 0;
+  }
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
 `;
 
 export const Footnote = styled.p`
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  line-height: 133%;
+  margin: 0 auto;
+  width: 85%;
+
+  @media ${viewports.medium} {
+    font-size: 1.25rem;
+    margin: 0;
+    width: auto;
+  }
 `;
 
 export const MailLink = styled.a`
