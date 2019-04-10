@@ -7,11 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin: 0 auto;
-  max-width: 90rem;
+  max-width: 80rem;
   min-height: 100vh;
-  padding-top: 4rem;
+  padding: 2rem;
   position: relative;
-  width: 90%;
 
   @media ${viewports.medium} {
     justify-content: center;

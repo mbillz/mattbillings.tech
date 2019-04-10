@@ -37,7 +37,7 @@ const Base = styled.div`
   display: flex;
   justify-content: center;
   margin-left: auto;
-  margin-top: 2.5rem;
+  margin-top: auto;
 
   @media ${viewports.medium} {
     justify-content: flex-end;
