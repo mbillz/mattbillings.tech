@@ -36,6 +36,7 @@ export default memo(SocialIcons);
 const Base = styled.div`
   display: flex;
   justify-content: center;
+  margin-left: auto;
   margin-top: 2.5rem;
 
   @media ${viewports.medium} {
