@@ -1,12 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render, cleanup } from 'react-testing-library';
 import SocialLink from '../SocialLink';
 
-test('social link renders', () => {
-  const container = document.createElement('div');
-  ReactDOM.render(<SocialLink />, container);
+afterEach(cleanup);
+
+test('social link contains <a />', () => {
+  const { container } = render(<SocialLink />);
+  expect(container.innerHTML).toContain('a');
 });
 
-test('social link displays svg', () => {});
+test('social link renders children', () => {
+  const { container } = render(<SocialLink children={<svg />} />);
+  expect(container.innerHTML).toContain('svg');
+});
 
-test('social link opens new window', () => {});
+test('social link contains url', () => {
+  const fakeUrl = 'https://fakeurl.com';
+  const { container } = render(<SocialLink url={fakeUrl} />);
+  const link = container.querySelector('a');
+  expect(link.href).toContain(fakeUrl);
+});
