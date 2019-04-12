@@ -23,7 +23,8 @@
     "react-three-fiber": "^2.0.4",
     "styled-components": "^4.2.0",
     "styled-reset": "^2.0.6",
-    "three": "^0.103.0"
+    "three": "^0.103.0",
+    "three.meshline": "^1.2.0"
   },
   "devDependencies": {
     "babel-jest": "^24.7.1",
