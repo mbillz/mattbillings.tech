@@ -2,12 +2,12 @@ import React from 'react';
 import Layout from '../components/shared/Layout';
 import SocialIcons from '../components/shared/SocialIcons';
 import { Container } from '../components/styled/Container';
-import AnimatedScene from '../components/shared/AnimatedScene';
+import Background from '../components/scene/Background';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <AnimatedScene />
+      <Background />
       <Container>
         <SocialIcons />
       </Container>

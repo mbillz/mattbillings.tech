@@ -2,8 +2,8 @@ export const colors = {
   black: '#000',
   white: '#fff',
   blue: '#3A86FF',
-  red: '#FB5607',
-  yellow: '#FFBE0B',
+  red: '#e53336',
+  yellow: '#fff5a2',
 };
 
 export const fontFamilies = {

@@ -23,7 +23,6 @@
     "styled-components": "^4.2.0",
     "styled-reset": "^2.0.6",
     "three": "^0.103.0",
-    "three-orbit-controls": "^82.1.0",
     "three.meshline": "^1.2.0"
   },
   "devDependencies": {

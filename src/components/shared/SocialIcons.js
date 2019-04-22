@@ -35,5 +35,5 @@ const Base = styled.div`
 `;
 
 const Icon = styled.svg`
-  fill: ${colors.white};
+  fill: ${colors.black};
 `;
