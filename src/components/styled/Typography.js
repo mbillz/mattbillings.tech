@@ -51,7 +51,7 @@ export const Footnote = styled.p`
 `;
 
 export const MailLink = styled.a`
-  color: ${colors.contentBlack};
+  color: ${colors.black};
   display: inline-block;
   font-weight: 500;
   line-height: 125%;

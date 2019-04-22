@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { memo } from 'react';
 import Layout from '../components/shared/Layout';
-import SocialIcons from '../components/shared/SocialIcons';
 import Container from '../components/styled/Container';
 import Background from '../components/scene/Background';
 import Copy from '../components/shared/Copy';
+import Footer from '../components/shared/Footer';
 
 const IndexPage = () => {
   return (
@@ -11,10 +11,10 @@ const IndexPage = () => {
       <Background />
       <Container>
         <Copy />
-        <SocialIcons />
+        <Footer />
       </Container>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default memo(IndexPage);

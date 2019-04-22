@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { memo, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Canvas } from 'react-three-fiber';
@@ -7,14 +7,11 @@ import { colors } from '../../utils/variables';
 
 const Background = () => {
   const [sceneIndex, setSceneIndex] = useState(0);
-  const bgColors = [colors.red, colors.blue];
+  const bgColors = [colors.red, colors.blue, colors.orange, colors.green];
+
   const bgColorSpring = useSpring({
-    to: {
-      backgroundColor: bgColors[sceneIndex],
-    },
-    config: {
-      mass: 500,
-    },
+    to: { backgroundColor: bgColors[sceneIndex] },
+    config: { duration: 3000 },
   });
 
   const changeSceneIndex = () => {
@@ -27,7 +24,8 @@ const Background = () => {
   };
 
   useEffect(() => {
-    setInterval(changeSceneIndex, 15000);
+    setInterval(changeSceneIndex, 30000);
+    return () => clearInterval(changeSceneIndex);
   });
 
   return (
@@ -43,7 +41,7 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default memo(Background);
 
 const Base = styled(animated.div)`
   bottom: 0;

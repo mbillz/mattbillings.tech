@@ -1,6 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import { apply, useRender } from 'react-three-fiber';
 import * as meshline from 'three.meshline';
+import PropTypes from 'prop-types';
 import { colors } from '../../utils/variables';
 
 apply(meshline);
@@ -46,4 +47,8 @@ const WavyLine = ({ index }) => {
   );
 };
 
-export default WavyLine;
+WavyLine.propTypes = {
+  index: PropTypes.number.isRequired,
+};
+
+export default memo(WavyLine);

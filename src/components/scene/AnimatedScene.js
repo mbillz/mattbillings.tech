@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { useRender, useThree } from 'react-three-fiber';
 import WavyLine from './WavyLine';
 
@@ -22,4 +22,4 @@ const AnimatedScene = () => {
   return lines.map((_, index) => <WavyLine key={index} index={index} />);
 };
 
-export default AnimatedScene;
+export default memo(AnimatedScene);

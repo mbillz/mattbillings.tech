@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import { Heading, BodyText, Subheading } from '../styled/Typography';
 
@@ -21,7 +21,7 @@ const Copy = () => {
   );
 };
 
-export default Copy;
+export default memo(Copy);
 
 const Base = styled.div`
   margin-top: auto;

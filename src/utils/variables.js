@@ -3,7 +3,8 @@ export const colors = {
   white: '#fff',
   blue: '#4b73ec',
   red: '#e53336',
-  green: '#1AA379',
+  orange: '#EF671B',
+  green: '#087447',
   yellow: '#fff5a2',
 };
 
