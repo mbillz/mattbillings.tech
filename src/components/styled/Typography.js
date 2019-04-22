@@ -2,18 +2,18 @@ import styled from 'styled-components';
 import { colors, viewports } from '../../utils/variables';
 
 export const Heading = styled.h1`
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
 `;
 
 export const Subheading = styled.h2`
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5rem;
 `;
 
-export const Copy = styled.p`
+export const BodyText = styled.p`
   border-bottom: 1px #000 solid;
   font-size: 1.5rem;
   font-weight: 400;
@@ -21,6 +21,10 @@ export const Copy = styled.p`
 
   & em {
     font-style: italic;
+  }
+
+  & strong {
+    font-weight: 500;
   }
 
   @media ${viewports.medium} {

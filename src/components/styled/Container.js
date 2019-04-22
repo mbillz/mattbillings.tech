@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+const Container = styled.div`
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -11,3 +11,5 @@ export const Container = styled.div`
   padding: 3.75rem;
   position: relative;
 `;
+
+export default Container;
