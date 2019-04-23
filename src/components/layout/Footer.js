@@ -21,7 +21,7 @@ const Footer = () => {
         <MailLink href="mailto:mbillings@gmail.com?subject=Hi+Matt.+I'd+like+to+see+examples+of+your+work.">
           mbillings@gmail.com
         </MailLink>
-        &nbsp; to receive examples of work.
+        &nbsp;to receive examples of work.
       </Footnote>
       <SocialIcons />
     </Base>
