@@ -30,8 +30,7 @@ export default memo(SocialIcons);
 
 const Base = styled.div`
   display: flex;
-  margin-left: auto;
-  margin-top: auto;
+  justify-content: center;
 `;
 
 const Icon = styled.svg`

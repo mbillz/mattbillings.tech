@@ -1,6 +1,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import { node } from 'prop-types';
 import GlobalStyle from '../styled/GlobalStyle';
 import favicon from '../../static/icons/favicon.png';
 import appleTouchIcon from '../../static/icons/apple-touch-icon.png';
@@ -54,6 +55,10 @@ const Layout = ({ children }) => {
       )}
     />
   );
+};
+
+Layout.propTypes = {
+  children: node.isRequired,
 };
 
 export default Layout;

@@ -14,7 +14,7 @@ export const Subheading = styled.h2`
 export const BodyText = styled.p`
   font-size: 1.5rem;
   font-weight: 400;
-  line-height: 2.5;
+  line-height: 133%;
 
   & em {
     font-style: italic;
@@ -26,14 +26,12 @@ export const BodyText = styled.p`
 `;
 
 export const Footnote = styled.p`
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 133%;
-  margin: 0 auto;
-  width: 85%;
+  margin: 0 auto 1.5rem;
 
   @media ${viewports.medium} {
-    font-size: 1.25rem;
     margin: 0;
     width: auto;
   }
