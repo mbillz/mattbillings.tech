@@ -6,13 +6,9 @@ import { node } from 'prop-types';
 import GlobalStyle from '../styled/GlobalStyle';
 import favicon from '../../static/icons/favicon.png';
 import appleTouchIcon from '../../static/icons/apple-touch-icon.png';
-import socialImage from '../../static/social.jpg';
+import SocialMeta from './SocialMeta';
 
 const Layout = ({ children }) => {
-  const socialTitle = 'Matt Billings dot Tech';
-  const socialUrl = 'https://mattbillings.tech';
-  const socialDescription =
-    'A website for a nice young man that wants a job making creative web products';
   return (
     <StaticQuery
       query={graphql`
@@ -39,15 +35,7 @@ const Layout = ({ children }) => {
               sizes="180x180"
               href={appleTouchIcon}
             />
-            <meta property="og:url" content={socialUrl} />
-            <meta property="og:type" content="website" />
-            <meta property="og:title" content={socialTitle} />
-            <meta property="og:description" content={socialDescription} />
-            <meta property="og:image" content={`${socialImage}`} />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={socialUrl} />
-            <meta name="twitter:description" content={socialDescription} />
-            <meta name="twitter:image" content={socialImage} />
+            <SocialMeta />
           </Helmet>
           <GlobalStyle />
           <Main>{children}</Main>
