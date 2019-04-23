@@ -16,7 +16,7 @@ const Copy = () => {
       <AnimatedText delay={2000} margin="0 0 2.5rem">
         <BodyText>
           <strong>Specializing in:</strong> React, Node, JavaScript, CSS, HTML,
-          GraphQL
+          GraphQL, REST
         </BodyText>
       </AnimatedText>
       <AnimatedText delay={2250} margin="0 0 2.5rem">
@@ -26,10 +26,9 @@ const Copy = () => {
       </AnimatedText>
       <AnimatedText delay={2500} margin="0 0 2.5rem">
         <BodyText>
-          <strong>Experimenting with:</strong> ThreeJS
+          <strong>Experimenting in:</strong> ThreeJS
         </BodyText>
       </AnimatedText>
-      .
     </Base>
   );
 };

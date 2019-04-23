@@ -9,14 +9,13 @@ apply(meshline);
 const WavyLine = ({ index }) => {
   const material = useRef();
 
-  const [curve] = useState(() => {
-    const geo = new Float32Array(600);
-    for (let j = 0; j < 200 * 6; j += 3) {
-      geo[j] = -30 + 1 * j;
-      geo[j + 1] = 1 * Math.cos(0.1 * j);
-      geo[j + 2] = -20;
-    }
-    return geo;
+  const [points] = useState(() => {
+    const numPoints = 210;
+    return new Float32Array(numPoints).map((_, i) => {
+      if (i % 3 === 0) return -30 + 1 * i;
+      if (i % 3 === 1) return 1 * Math.cos(0.1 * i);
+      if (i % 3 === 2) return -20;
+    });
   });
 
   useRender(() => {
@@ -26,7 +25,7 @@ const WavyLine = ({ index }) => {
   return (
     <mesh position={[0, 0, 100 - index * 5]}>
       <meshLine onUpdate={self => (self.parent.geometry = self.geometry)}>
-        <geometry onUpdate={self => self.parent.setGeometry(curve)} />
+        <geometry onUpdate={self => self.parent.setGeometry(points)} />
       </meshLine>
       <meshLineMaterial
         attach="material"
