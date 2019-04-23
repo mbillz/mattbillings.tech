@@ -6,20 +6,20 @@ import AnimatedScene from './AnimatedScene';
 import { colors } from '../../utils/variables';
 
 const Background = () => {
-  const [sceneIndex, setSceneIndex] = useState(0);
-  const bgColors = [colors.red, colors.blue, colors.orange, colors.green];
-  const bgColorSpring = useSpring({
-    to: { backgroundColor: bgColors[sceneIndex] },
-    config: { duration: 3000 },
-  });
-  const changeSceneIndex = () => {
-    if (sceneIndex === bgColors.length - 1) {
-      setSceneIndex(0);
-    } else {
-      const nextScene = sceneIndex + 1;
-      setSceneIndex(nextScene);
-    }
-  };
+  // const [sceneIndex, setSceneIndex] = useState(0);
+  // const bgColors = [colors.red, colors.blue, colors.orange, colors.green];
+  // const bgColorSpring = useSpring({
+  //   to: { backgroundColor: bgColors[sceneIndex] },
+  //   config: { duration: 3000 },
+  // });
+  // const changeSceneIndex = () => {
+  //   if (sceneIndex === bgColors.length - 1) {
+  //     setSceneIndex(0);
+  //   } else {
+  //     const nextScene = sceneIndex + 1;
+  //     setSceneIndex(nextScene);
+  //   }
+  // };
 
   const [isReady, setIsReady] = useState(false);
   const canvasSpring = useSpring({
@@ -31,16 +31,14 @@ const Background = () => {
   const init = () => setIsReady(true);
 
   useEffect(() => {
-    setInterval(changeSceneIndex, 30000);
     setTimeout(init, 500);
     return () => {
-      clearInterval(changeSceneIndex);
       clearTimeout(init);
     };
   });
 
   return (
-    <Base style={bgColorSpring}>
+    <Base>
       <CanvasContainer style={canvasSpring}>
         <Canvas
           camera={{
@@ -57,6 +55,7 @@ const Background = () => {
 export default memo(Background);
 
 const Base = styled(animated.div)`
+  background: ${colors.red};
   bottom: 0;
   left: 0;
   position: absolute;
