@@ -1,7 +1,7 @@
 import React, { memo, useRef, useState } from 'react';
 import { apply, useRender } from 'react-three-fiber';
 import * as meshline from 'three.meshline';
-import PropTypes from 'prop-types';
+import { number } from 'prop-types';
 import { colors } from '../../utils/variables';
 
 apply(meshline);
@@ -25,11 +25,7 @@ const WavyLine = ({ index }) => {
 
   return (
     <mesh position={[0, 0, 100 - index * 5]}>
-      <meshLine
-        onUpdate={self => {
-          self.parent.geometry = self.geometry;
-        }}
-      >
+      <meshLine onUpdate={self => (self.parent.geometry = self.geometry)}>
         <geometry onUpdate={self => self.parent.setGeometry(curve)} />
       </meshLine>
       <meshLineMaterial
@@ -48,7 +44,7 @@ const WavyLine = ({ index }) => {
 };
 
 WavyLine.propTypes = {
-  index: PropTypes.number.isRequired,
+  index: number.isRequired,
 };
 
 export default memo(WavyLine);
