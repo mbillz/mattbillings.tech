@@ -10,7 +10,7 @@ import socialImage from '../../static/social.jpg';
 
 const Layout = ({ children }) => {
   const socialTitle = 'Matt Billings dot Tech';
-  const socialUrl = 'http://mattbillings.tech';
+  const socialUrl = 'https://mattbillings.tech';
   const socialDescription =
     'A website for a nice young man that wants a job making creative web products';
   return (
