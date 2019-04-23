@@ -1,5 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import { node } from 'prop-types';
 import GlobalStyle from '../styled/GlobalStyle';
@@ -50,7 +51,7 @@ const Layout = ({ children }) => {
           /> */}
           </Helmet>
           <GlobalStyle />
-          <main>{children}</main>
+          <Main>{children}</Main>
         </>
       )}
     />
@@ -62,3 +63,7 @@ Layout.propTypes = {
 };
 
 export default Layout;
+
+const Main = styled.main`
+  position: relative;
+`;
