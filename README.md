@@ -1,6 +1,6 @@
 # mattbillings.tech
 
-### A playground for a reflective web developer, hoping to make a positive impact on the world through code.
+### A playground for a reflective developer, hoping to make a positive impact on the world through code.
 
 ### To-Do
 

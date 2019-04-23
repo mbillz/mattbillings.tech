@@ -4,7 +4,7 @@ import socialImage from '../../static/social.jpg';
 const socialTitle = 'Matt Billings dot Tech';
 const socialUrl = 'https://mattbillings.tech';
 const socialDescription =
-  'A playground for a reflective web developer, hoping to make a positive impact on the world through code.';
+  'A playground for a reflective developer, hoping to make a positive impact on the world through code.';
 
 const SocialMeta = () => {
   return (
