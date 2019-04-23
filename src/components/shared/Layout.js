@@ -6,8 +6,13 @@ import { node } from 'prop-types';
 import GlobalStyle from '../styled/GlobalStyle';
 import favicon from '../../static/icons/favicon.png';
 import appleTouchIcon from '../../static/icons/apple-touch-icon.png';
+import socialImage from '../../static/social.jpg';
 
 const Layout = ({ children }) => {
+  const socialTitle = 'Matt Billings dot Tech';
+  const socialUrl = 'http://mattbillings.tech';
+  const socialDescription =
+    'A website for a nice young man that wants a job making creative web products';
   return (
     <StaticQuery
       query={graphql`
@@ -34,21 +39,15 @@ const Layout = ({ children }) => {
               sizes="180x180"
               href={appleTouchIcon}
             />
-            <meta property="og:url" content="http://mattbillings.tech" />
+            <meta property="og:url" content={socialUrl} />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="Matt Billings dot Tech" />
-            <meta
-              property="og:description"
-              content="A website for an enthusiastic young man that wants a job making creative web products"
-            />
-            {/* <meta property="og:image" content={`${image}?v2`} /> */}
-            {/* <meta name="twitter:card" content="summary_large_image" /> */}
-            <meta name="twitter:title" content="http://mattbillings.tech" />
-            {/* <meta name="twitter:description" content={description} /> */}
-            {/* <meta
-            name="twitter:image"
-            content="https://volunteer.lamayor.org/static/images/VolunteerLA_SocialMeta.png"
-          /> */}
+            <meta property="og:title" content={socialTitle} />
+            <meta property="og:description" content={socialDescription} />
+            <meta property="og:image" content={`${socialImage}`} />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={socialUrl} />
+            <meta name="twitter:description" content={socialDescription} />
+            <meta name="twitter:image" content={socialImage} />
           </Helmet>
           <GlobalStyle />
           <Main>{children}</Main>
