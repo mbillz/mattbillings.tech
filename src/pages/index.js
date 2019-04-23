@@ -1,16 +1,16 @@
 import React, { memo } from 'react';
-import Layout from '../components/shared/Layout';
+import Layout from '../components/layout/Layout';
 import Container from '../components/styled/Container';
-import Background from '../components/scene/Background';
-import Copy from '../components/shared/Copy';
-import Footer from '../components/shared/Footer';
+import SceneBg from '../components/scene/SceneBg';
+import Content from '../components/layout/Content';
+import Footer from '../components/layout/Footer';
 
 const IndexPage = () => {
   return (
     <Layout>
-      <Background />
+      <SceneBg />
       <Container>
-        <Copy />
+        <Content />
         <Footer />
       </Container>
     </Layout>

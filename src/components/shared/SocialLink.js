@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
+import { node, string } from 'prop-types';
 import { viewports } from '../../utils/variables';
 
 const SocialLink = ({ children, url }) => {
@@ -13,6 +14,11 @@ const SocialLink = ({ children, url }) => {
       {children}
     </Base>
   );
+};
+
+SocialLink.propTypes = {
+  children: node.isRequired,
+  url: string.isRequired,
 };
 
 export default memo(SocialLink);

@@ -5,22 +5,7 @@ import { Canvas } from 'react-three-fiber';
 import AnimatedScene from './AnimatedScene';
 import { colors } from '../../utils/variables';
 
-const Background = () => {
-  // const [sceneIndex, setSceneIndex] = useState(0);
-  // const bgColors = [colors.red, colors.blue, colors.orange, colors.green];
-  // const bgColorSpring = useSpring({
-  //   to: { backgroundColor: bgColors[sceneIndex] },
-  //   config: { duration: 3000 },
-  // });
-  // const changeSceneIndex = () => {
-  //   if (sceneIndex === bgColors.length - 1) {
-  //     setSceneIndex(0);
-  //   } else {
-  //     const nextScene = sceneIndex + 1;
-  //     setSceneIndex(nextScene);
-  //   }
-  // };
-
+const SceneBg = () => {
   const [isReady, setIsReady] = useState(false);
   const canvasSpring = useSpring({
     to: { opacity: isReady ? 1 : 0 },
@@ -52,7 +37,7 @@ const Background = () => {
   );
 };
 
-export default memo(Background);
+export default memo(SceneBg);
 
 const Base = styled(animated.div)`
   background: ${colors.red};

@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import SocialLink from './SocialLink';
+import SocialLink from '../shared/SocialLink';
 import { colors } from '../../utils/variables';
 
 const SocialIcons = () => {
