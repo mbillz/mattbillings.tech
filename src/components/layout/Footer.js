@@ -1,24 +1,17 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import { MailLink, Footnote } from '../styled/Typography';
 import SocialIcons from './SocialIcons';
 import { viewports } from '../../utils/variables';
+import useIsReady from '../../hooks/useIsReady';
 
 const Footer = () => {
-  const [isReady, setIsReady] = useState(false);
+  const isReady = useIsReady(1000);
   const footerSpring = useSpring({
     to: {
       opacity: isReady ? 1 : 0,
     },
-  });
-  const init = () => setIsReady(true);
-
-  useEffect(() => {
-    setTimeout(init, 1000);
-    return () => {
-      clearTimeout(init);
-    };
   });
 
   return (

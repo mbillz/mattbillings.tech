@@ -1,25 +1,18 @@
-import React, { memo, useState, useEffect } from 'react';
+import React, { memo } from 'react';
 import styled from 'styled-components';
 import { useSpring, animated } from 'react-spring';
 import { Canvas } from 'react-three-fiber';
 import AnimatedScene from './AnimatedScene';
 import { colors } from '../../utils/variables';
+import useIsReady from '../../hooks/useIsReady';
 
 const SceneBg = () => {
-  const [isReady, setIsReady] = useState(false);
+  const isReady = useIsReady(500);
   const canvasSpring = useSpring({
     to: { opacity: isReady ? 1 : 0 },
     config: {
       duration: 5000,
     },
-  });
-  const init = () => setIsReady(true);
-
-  useEffect(() => {
-    setTimeout(init, 500);
-    return () => {
-      clearTimeout(init);
-    };
   });
 
   return (
