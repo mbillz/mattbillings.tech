@@ -14,21 +14,21 @@ const Content = () => {
       <AnimatedText delay={1500} margin="0 0 5rem">
         <Subheading>{textContent.subheading}</Subheading>
       </AnimatedText>
-      <AnimatedText delay={2000} margin="0 0 2.5rem">
+      <AnimatedText delay={2000}>
         <BodyText>
           <strong>Specializing in:</strong>
           &nbsp;
           {textContent.specializing}
         </BodyText>
       </AnimatedText>
-      <AnimatedText delay={2250} margin="0 0 2.5rem">
+      <AnimatedText delay={2250}>
         <BodyText>
           <strong>Experienced in:</strong>
           &nbsp;
           {textContent.experienced}
         </BodyText>
       </AnimatedText>
-      <AnimatedText delay={2500} margin="0 0 2.5rem">
+      <AnimatedText delay={2500}>
         <BodyText>
           <strong>Experimenting in:</strong>
           &nbsp;

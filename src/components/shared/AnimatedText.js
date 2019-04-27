@@ -22,8 +22,13 @@ const AnimatedText = ({ children, delay, margin }) => {
 
 AnimatedText.propTypes = {
   children: node.isRequired,
-  delay: number.isRequired,
-  margin: string.isRequired,
+  delay: number,
+  margin: string,
+};
+
+AnimatedText.defaultProps = {
+  delay: 0,
+  margin: '0 0 2.5rem',
 };
 
 export default memo(AnimatedText);
