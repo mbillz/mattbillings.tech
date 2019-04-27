@@ -12,9 +12,11 @@ const AnimatedScene = () => {
   const radius = 15;
 
   useRender(() => {
-    camera.position.x = radius * Math.sin(angle);
-    camera.position.y = -radius * -Math.sin(angle);
-    camera.position.z = angle * -angle;
+    camera.position.set(
+      radius * Math.sin(angle),
+      -radius * -Math.sin(angle),
+      angle * -angle
+    );
     camera.rotation.z += 0.001;
     angle += 0.005;
   });

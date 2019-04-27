@@ -14,7 +14,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#e53336`,
-        theme_color: `#ffffff`,
+        theme_color: `#fff5a2`,
         display: `minimal-ui`,
         icon: `src/static/icons/apple-touch-icon.png`,
       },

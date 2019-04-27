@@ -4,6 +4,4 @@
 
 ### To-Do
 
-- Write out test for text component
-- Hook Gatsby build into Git push
 - Restart ThreeJS animation after line array goes out of view
