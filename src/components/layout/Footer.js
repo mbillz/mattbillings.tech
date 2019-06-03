@@ -31,16 +31,16 @@ const Footer = () => {
 export default memo(Footer);
 
 const Base = styled(animated.footer)`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  justify-content: center;
   margin-top: auto;
   text-align: center;
   width: 100%;
 
   @media ${viewports.medium} {
     align-items: flex-end;
-    flex-direction: row;
+    grid-template-columns: 75% 25%;
+    justify-content: space-between;
     text-align: left;
   }
 `;

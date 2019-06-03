@@ -1,7 +1,7 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
 import SocialLink from '../shared/SocialLink';
-import { colors } from '../../utils/variables';
+import { viewports, colors } from '../../utils/variables';
 
 const SocialIcons = () => {
   return (
@@ -31,6 +31,10 @@ export default memo(SocialIcons);
 const Base = styled.div`
   display: flex;
   justify-content: center;
+
+  @media ${viewports.medium} {
+    justify-content: flex-end;
+  }
 `;
 
 const Icon = styled.svg`

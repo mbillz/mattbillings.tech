@@ -2,10 +2,7 @@ import styled from 'styled-components';
 import { viewports } from '../../utils/variables';
 
 const Container = styled.div`
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  display: grid;
   margin: 0 auto;
   max-width: 100vw;
   min-height: 100vh;
