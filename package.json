@@ -18,11 +18,11 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
-    "react-spring": "^8.0.19",
-    "react-three-fiber": "^2.0.4",
-    "styled-components": "^4.2.0",
-    "styled-reset": "^2.0.6",
-    "three": "^0.103.0",
+    "react-spring": "^8.0.25",
+    "react-three-fiber": "^2.2.9",
+    "styled-components": "^4.3.2",
+    "styled-reset": "^2.0.16",
+    "three": "^0.106.1",
     "three.meshline": "^1.2.0"
   },
   "devDependencies": {
