@@ -1,9 +1,9 @@
 const textContent = {
   heading: 'Matt Billings',
-  subheading: 'Developer / Engineer',
-  specializing: 'React, Node, JavaScript, CSS, HTML, GraphQL, REST',
-  experienced: 'Gatsby, React Native, Jest, AWS, PHP',
-  experimenting: 'ThreeJS',
+  subheading: 'Software Engineer',
+  specializing: 'React, Node, TypeScript, CSS, HTML, GraphQL, REST',
+  experienced: 'NextJS, Gatsby, React Native, Jest, AWS',
+  experimenting: 'Golang, ThreeJS, Processing',
 };
 
 export default textContent;
