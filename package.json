@@ -22,7 +22,7 @@
     "react-three-fiber": "^2.2.9",
     "styled-components": "^4.3.2",
     "styled-reset": "^2.0.16",
-    "three": "^0.106.1",
+    "three": "^0.137.0",
     "three.meshline": "^1.2.0"
   },
   "devDependencies": {
