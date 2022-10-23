@@ -41,7 +41,7 @@ const Content = () => {
 
 export default memo(Content);
 
-const Base = styled.main`
+const Base = styled.section`
   margin-top: auto;
   text-align: center;
 

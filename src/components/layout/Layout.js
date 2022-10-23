@@ -56,6 +56,6 @@ Layout.propTypes = {
 
 export default Layout;
 
-const Main = styled.div`
+const Main = styled.main`
   position: relative;
 `;

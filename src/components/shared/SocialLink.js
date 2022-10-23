@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { node, string } from 'prop-types';
 import { viewports } from '../../utils/variables';
 
-const SocialLink = ({ children, url }) => {
+const SocialLink = ({ children, url, label }) => {
   return (
     <Base
+      aria-label={label}
       href={url}
       target="_blank"
       rel="noopener noreferrer"
@@ -19,6 +20,7 @@ const SocialLink = ({ children, url }) => {
 SocialLink.propTypes = {
   children: node.isRequired,
   url: string.isRequired,
+  label: string.isRequired,
 };
 
 export default memo(SocialLink);
